@@ -8,9 +8,9 @@ Nevertheless it is also possible to run ```git commit``` and ```git push```.
 
 These are the commands:
 
-```gito ``` respository_subfolder .... add a already initialized git repository in a subfolder
+```gito <respository_subfolder>``` .... add a already initialized git repository in a subfolder
 
-```gito rm``` respository_subfolder ..... deleting it
+```gito rm <respository_subfolder>``` ..... deleting it
 
 ```gito list``` ......................... lists all added git paths
 
