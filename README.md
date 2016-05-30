@@ -9,10 +9,15 @@ Nevertheless it is also possible to run ```git commit``` and ```git push```.
 These are the commands:
 
 ```gito ``` respository_subfolder .... add a already initialized git repository in a subfolder
+
 ```gito rm``` respository_subfolder ..... deleting it
+
 ```gito list``` ......................... lists all added git paths
+
 ```gito pull``` ......................... iterates through every added git path and pulls them separately
+
 ```gito commit``` ....................... the same but commits them – you will be asked for commit messages
+
 ```gito push``` ......................... the same but pushes them
 
 
