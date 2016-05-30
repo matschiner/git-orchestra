@@ -36,7 +36,7 @@ These are the commands:
 ```gito push``` ......................... the same but pushes them
 
 
-Git orchestra creates a JSON config file named ```.gitpullconfig``` in the current folder and expects the repositories as direct subfolders.
+Git orchestra creates a JSON config file named ```.git_orchestra.config``` in the current folder and expects the repositories as direct subfolders.
 
 
 Hope this will help you!
