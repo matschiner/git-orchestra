@@ -13,11 +13,13 @@ type configstr struct {
 	Path string `json:"path"`
 }
 
+var filename = ".git_orchestra.config"
+
 func main() {
 	// fmt.Println("test")
 	var config []configstr
 
-	body, _ := ioutil.ReadFile(".gitpullconfig")
+	body, _ := ioutil.ReadFile(filename)
 	json.Unmarshal(body, &config)
 	if len(os.Args) < 2 {
 		log.Fatal("Please input a command!")
@@ -128,7 +130,7 @@ func writeconfig(config []configstr) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err2 := ioutil.WriteFile(".gitpullconfig", j, 0644)
+	err2 := ioutil.WriteFile(filename, j, 0644)
 	if err2 != nil {
 		fmt.Println(err2)
 	}
