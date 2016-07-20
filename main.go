@@ -65,6 +65,10 @@ func main() {
 
 	case "pull":
 		fmt.Println("Pulling ...")
+		if len(config) == 0 {
+			fmt.Println("No respository was added in this directory.")
+			break
+		}
 		for _, path := range config {
 			fmt.Println(" - " + path.Path)
 			// cmd := exec.Command("bash", "-c", "cd ", path.Path, "&&", "ls")
