@@ -72,8 +72,8 @@ func main() {
 			if err != nil {
 				fmt.Println(err)
 			}
-			cmd := exec.Command("ls", "&&", "git", "pull")
-			//cmd := exec.Command("ls")
+			// cmd := exec.Command("ls", "&&", "git", "pull")
+			cmd := exec.Command("ls")
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
 			cmd.Run()
