@@ -18,7 +18,7 @@ var filename = ".git_orchestra.config"
 func main() {
 	// fmt.Println("test")
 	var config []configstr
-
+	var err error
 	body, _ := ioutil.ReadFile(filename)
 	json.Unmarshal(body, &config)
 	if len(os.Args) < 2 {
@@ -68,8 +68,11 @@ func main() {
 		for _, path := range config {
 			fmt.Println(" - " + path.Path)
 			// cmd := exec.Command("bash", "-c", "cd ", path.Path, "&&", "ls")
-			os.Chdir(path.Path)
-			cmd := exec.Command("git", "pull")
+			err = os.Chdir(path.Path)
+			if err != nil {
+				fmt.Println(err)
+			}
+			cmd := exec.Command("ls", "&&", "git", "pull")
 			//cmd := exec.Command("ls")
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
