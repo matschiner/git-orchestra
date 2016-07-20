@@ -73,7 +73,7 @@ func main() {
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
 			cmd.Run()
-			os.Chdir(os.Getenv("HOME"))
+			os.Chdir(os.Getenv("PWD"))
 			// fmt.Println(out)
 		}
 	case "push":
@@ -87,7 +87,7 @@ func main() {
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
 			cmd.Run()
-			os.Chdir("../")
+			os.Chdir(os.Getenv("PWD"))
 			// fmt.Println(out)
 		}
 	case "commit":
@@ -101,7 +101,7 @@ func main() {
 			cmd.Stdout = os.Stdout
 			cmd.Stderr = os.Stderr
 			cmd.Run()
-			os.Chdir("../")
+			os.Chdir(os.Getenv("PWD"))
 			// fmt.Println(out)
 		}
 	case "list":
