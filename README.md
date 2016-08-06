@@ -7,7 +7,7 @@ Nevertheless it is also possible to run ```git commit``` and ```git push```.
 ##Installing
 Fetching the repository:
 
-    git clone github.com/matschiner/git-orchestra
+    git clone https://github.com/matschiner/git-orchestra
 
 Git Orchestra is written in Go lang. Therefore building the utility on a mac could look like this:
 
